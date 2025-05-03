@@ -1,0 +1,69 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SystemSazek.UI"
+        x:Class="SystemSazek.UI.MainMenu"
+        Width="1080" Height="720" Title="Formulář"
+        x:DataType="local:MainMenu"
+        Background="#F7F9FC">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15" Margin="20">
+        <TextBlock Text="Hlavní Menu" FontSize="28" FontWeight="Bold" Foreground="#2C3E50" HorizontalAlignment="Center" />
+
+        <!-- Informace o sázkách -->
+        <Border Background="#FFFFFF" CornerRadius="10" Padding="15" Margin="0,10,0,20" BorderBrush="#DADFE1" BorderThickness="1" Width="400" HorizontalAlignment="Center">
+            <StackPanel Spacing="5">
+                <TextBlock Text="{Binding UspesnostText}" FontSize="16" Foreground="#34495E" />
+                <TextBlock Text="{Binding VsazenaText}" FontSize="16" Foreground="#34495E" />
+                <TextBlock Text="{Binding VyhranaText}" FontSize="16" Foreground="#34495E" />
+            </StackPanel>
+        </Border>
+
+        <!-- Tlačítka akce -->
+        <StackPanel Spacing="10" HorizontalAlignment="Center">
+            <Button Content="Vytvořit Sázku" 
+                    Width="200" Height="50" 
+                    Background="#3498DB" 
+                    Foreground="#FFFFFF"
+                    FontSize="16" 
+                    FontWeight="SemiBold"
+                    CornerRadius="5"
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Click="OnVytovritSazkuClicked"/>
+
+            <Button Content="Zobrazit Sázky" 
+                    Width="200" Height="50" 
+                    Background="#3498DB" 
+                    Foreground="#FFFFFF"
+                    FontSize="16" 
+                    FontWeight="SemiBold"
+                    CornerRadius="5"
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Click="OnZobrazitSazkyClicked"/>
+
+            <Button Content="Deaktivuj Účet" 
+                    Width="200" Height="50" 
+                    Background="#E74C3C" 
+                    Foreground="#FFFFFF"
+                    FontSize="16" 
+                    FontWeight="SemiBold"
+                    CornerRadius="5"
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Click="OnDeaktivaceClicked"/>
+
+            <Button Content="Odejít" 
+                    Width="200" Height="50" 
+                    Background="#95A5A6" 
+                    Foreground="#FFFFFF"
+                    FontSize="16" 
+                    FontWeight="SemiBold"
+                    CornerRadius="5"
+                    HorizontalContentAlignment="Center" 
+                    VerticalContentAlignment="Center"
+                    Click="OnOdejitClicked"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
+

@@ -1,0 +1,81 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SystemSazek.UI.Registrace"
+        Width="1080" Height="720" Title="Registrace">
+<Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!-- Definice sloupců pro text a vstupní pole -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>  <!-- Sloupec pro popisky -->
+            <ColumnDefinition Width="*"/>    <!-- Sloupec pro vstupní pole -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Definice řádků pro jednotlivé prvky -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Výška řádku se přizpůsobí obsahu -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Registrace" FontSize="24" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,0,0,20" Grid.Row="0"/>
+
+        <TextBlock Text="Jméno " FontSize="16" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="FirstNameInput" Width="400" Height="40" FontSize="14" Grid.Row="1" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Prostřední jméno " FontSize="16" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="MiddleNameInput" Width="400" Height="40" FontSize="14" Grid.Row="2" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Příjmení " FontSize="16" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="LastNameInput" Width="400" Height="40" FontSize="14" Grid.Row="3" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Datum narození " FontSize="16" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <DatePicker Name="datePicker" Margin="10" Width="400" Height="40" FontSize="14" Grid.Row="4" Grid.Column="1" />
+
+        <TextBlock Text="Email " FontSize="16" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="EmailInput" Width="400" Height="40" FontSize="14" Grid.Row="5" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Telefon " FontSize="16" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="PhoneInput" Width="400" Height="40" FontSize="14" Grid.Row="6" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Heslo " FontSize="16" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="PasswordInput" Width="400" Height="40" FontSize="14" PasswordChar="*" Grid.Row="7" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Stát " FontSize="16" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="CountryInput" Width="400" Height="40" FontSize="14" Grid.Row="8" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Město " FontSize="16" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="CityInput" Width="400" Height="40" FontSize="14" Grid.Row="9" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="Ulice " FontSize="16" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="StreetInput" Width="400" Height="40" FontSize="14" Grid.Row="10" Grid.Column="1" Margin="0,5"/>
+
+        <TextBlock Text="PSČ " FontSize="16" Grid.Row="11" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,10,5"/>
+        <TextBox x:Name="PostalCodeInput" Width="400" Height="40" FontSize="14" Grid.Row="11" Grid.Column="1" Margin="0,5"/>
+
+        <Button Content="Registrovat se"
+        Width="150" Height="50" 
+        FontSize="16" 
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Background="Green"
+        Foreground="White"
+        HorizontalAlignment="Center"
+        Grid.Column="1"
+        Grid.Row="12"
+        Click="OnRegisterClicked"
+        Margin="0,20,0,0"/>
+        </Grid>
+</Window>
+

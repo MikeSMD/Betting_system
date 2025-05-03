@@ -1,0 +1,94 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SystemSazek.UI"
+        x:Class="SystemSazek.UI.ZobrazitDetailSazky"
+        Title="Zobrazit Sázky"
+        Width="1080" Height="720"
+        x:DataType="local:ZobrazitDetailSazky">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <!-- Definování řádků pro seznam a tlačítko -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!-- Pro tlačítko "Zpět" nahoře -->
+                <RowDefinition Height="*"/> <!-- Pro seznam položek -->
+                <RowDefinition Height="Auto"/> <!-- Pro tlačítka dole -->
+            </Grid.RowDefinitions>
+
+            <!-- Tlačítko Zpět nahoře -->
+            <Button Content="Zpět"
+                    Click="OnZpetClick"
+                    Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Background="#4CAF50" Foreground="White"
+                    BorderBrush="#388E3C" BorderThickness="1" CornerRadius="5"
+                    Grid.Row="0"/>
+
+            <!-- Seznam položek -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <StackPanel Margin="20">
+                    <TextBlock Text="Detail Sázky" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center" Foreground="#3e3e3e"/>
+                    <TextBlock Text="{Binding HlavniDetail.DatumCasVytvoreni}" FontSize="16" FontStyle="Italic" Margin="0,0,0,20" HorizontalAlignment="Center" Foreground="#757575"/>
+                    
+                    <TextBlock Text="Částka:" FontWeight="Bold" FontSize="16" Margin="0,10,0,2" Foreground="#3e3e3e"/>
+                    <TextBlock Text="{Binding HlavniDetail.Castka}" FontSize="14" Margin="0,0,0,10" Foreground="#757575"/>
+                    
+                    <TextBlock Text="Status:" FontWeight="Bold" FontSize="16" Margin="0,10,0,2" Foreground="#3e3e3e"/>
+                    <TextBlock Text="{Binding HlavniDetail.Status}" FontSize="14" Margin="0,0,0,20" Foreground="#757575"/>
+
+                    <ItemsControl ItemsSource="{Binding Polozky}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="local:DetailSazkaViewModel">
+                                <Border Background="#f0f0f0" BorderBrush="#c0c0c0" BorderThickness="1" CornerRadius="10" Margin="10">
+                                    <StackPanel Margin="10">
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <TextBlock Text="Zápas ID:" FontWeight="Bold" FontSize="14" Foreground="#3e3e3e" Margin="5"/>
+                                            <TextBlock Text="{Binding id_zapas}" FontSize="14" Foreground="#757575" Margin="5"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <TextBlock Text="Domácí tým ID:" FontWeight="Bold" FontSize="14" Foreground="#3e3e3e" Margin="5"/>
+                                            <TextBlock Text="{Binding id_tym_domaci}" FontSize="14" Foreground="#757575" Margin="5"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <TextBlock Text="Hostující tým ID:" FontWeight="Bold" FontSize="14" Foreground="#3e3e3e" Margin="5"/>
+                                            <TextBlock Text="{Binding id_tym_hoste}" FontSize="14" Foreground="#757575" Margin="5"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <TextBlock Text="Kurz:" FontWeight="Bold" FontSize="14" Foreground="#3e3e3e" Margin="5"/>
+                                            <TextBlock Text="{Binding kurz}" FontSize="14" Foreground="#757575" Margin="5"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <TextBlock Text="Vsazeno na:" FontWeight="Bold" FontSize="14" Foreground="#3e3e3e" Margin="5"/>
+                                            <TextBlock Text="{Binding vsazeno_na}" FontSize="14" Foreground="#757575" Margin="5"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <TextBlock Text="Začátek zápasu:" FontWeight="Bold" FontSize="14" Foreground="#3e3e3e" Margin="5"/>
+                                            <TextBlock Text="{Binding datum_cas_zacatku, StringFormat='dd.MM.yyyy HH:mm'}" FontSize="14" Foreground="#757575" Margin="5"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- Tlačítka dole -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="2">
+                <Button Content="Deaktivuj Sázku"
+                        Click="OnAkceClicked"
+                        Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Background="#E81123" Foreground="White"
+                        BorderBrush="#C62828" BorderThickness="1" CornerRadius="5"/>
+                <Button Content="Uprav Sázku"
+                        Click="OnUpravitClicked"
+                        Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Background="#2196F3" Foreground="White"
+                        BorderBrush="#1E88E5" BorderThickness="1" CornerRadius="5"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

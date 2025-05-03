@@ -1,0 +1,13 @@
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/bin/Debug/net9.0/SystemSazek.Core.deps.json
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/bin/Debug/net9.0/SystemSazek.Core.dll
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/bin/Debug/net9.0/SystemSazek.Core.pdb
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.csproj.AssemblyReference.cache
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.AssemblyInfoInputs.cache
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.AssemblyInfo.cs
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.csproj.CoreCompileInputs.cache
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.sourcelink.json
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.dll
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/refint/SystemSazek.Core.dll
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/SystemSazek.Core.pdb
+/home/mikei2k/Documents/Skola/VIS/projekt/SystemSazek.Core/obj/Debug/net9.0/ref/SystemSazek.Core.dll

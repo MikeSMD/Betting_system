@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SystemSazek.UI"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        x:Class="SystemSazek.UI.UpravitSazku"
+        Title="Úprava Sázky"
+        Width="1080" Height="720"
+        x:DataType="local:UpravitSazku">
+
+    <StackPanel Margin="20">
+        <TextBlock Text="Zadejte částku" />
+        <TextBox x:Name="CastkaTextBox" Width="200" Margin="0,5" Text="{Binding Castka}" />
+
+        <TextBlock Text="Zadejte zápas" Margin="10,10,0,0" />
+
+        <ItemsControl ItemsSource="{Binding PolozkaList}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="local:PolozkaSazky">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+<ComboBox Width="352"
+SelectedValue="{Binding IdZapasu, Mode=TwoWay}"
+          SelectedItem="{Binding IdZapasu, Mode=TwoWay}"
+                ItemsSource="{Binding Zapasy}"
+          Margin="0,5">
+          <ComboBox.ItemTemplate>
+        <DataTemplate>
+        <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}{0} - {1} vs {2} ({3})">
+                        <Binding Path="id_zapas" />
+                        <Binding Path="tym_domaci.nazev" />
+                        <Binding Path="tym_hoste.nazev" />
+                        <Binding Path="datum_cas_zacatku" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </DataTemplate>
+    </ComboBox.ItemTemplate>
+    </ComboBox>
+                        <ComboBox Width="100" SelectedItem="{Binding Vysledek, Mode=TwoWay}" Margin="0,5">
+                            <ComboBox.Items>
+                                <sys:String>-1</sys:String>
+                                <sys:String>0</sys:String>
+                                <sys:String>1</sys:String>
+                            </ComboBox.Items>
+                        </ComboBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <Button Content="Přidat další zápas" Click="OnAddZapasClick" Margin="0,10" />
+        <Button Content="Upravit Sázku" Click="OnUpravitSazkuClick" Margin="0,10" />
+    </StackPanel>
+</Window>
+

@@ -1,0 +1,40 @@
+[
+  {
+    "polozky": [
+      {
+        "zapas": {
+          "id_zapas": 5,
+          "datum_cas_zacatku": "2025-12-16T14:48:32",
+          "datum_cas_ukonceni": null,
+          "skore_domaci": null,
+          "skore_hoste": null,
+          "status": "O",
+          "kurz_domaci": 1.21,
+          "kurz_hoste": 1.48,
+          "kurz_shoda": 1.54,
+          "tym_domaci": {
+            "id_tym": 6,
+            "nazev": "Hawks",
+            "misto_zalozeni": "Misto6",
+            "datum_zalozeni": "2000-01-01T00:00:00",
+            "status": "Aktivni"
+          },
+          "tym_hoste": {
+            "id_tym": 10,
+            "nazev": "Dragons",
+            "misto_zalozeni": "Misto10",
+            "datum_zalozeni": "2000-01-01T00:00:00",
+            "status": "Aktivni"
+          }
+        },
+        "id_sazka_zapas": null,
+        "vsazeno_na": 1
+      }
+    ],
+    "id_sazka": 25,
+    "datum_cas_vytvoreni": "2025-05-03T20:58:02.2321536+02:00",
+    "datum_cas_uzavreni": null,
+    "castka": 5000.0,
+    "status": "Z"
+  }
+]
