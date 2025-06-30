@@ -1,2 +1,4 @@
 # Betting_system
-Simple betting system project made in C# and Avalonia as a project for school
+Simple setting system project made in C# and Avalonia - for users
+
+in file "Document.pdf" you can find detailed specification of the project
